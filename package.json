@@ -1,0 +1,29 @@
+{
+  "name": "mongo-node-anguler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "co": "^4.6.0",
+    "express": "^4.15.2",
+    "log4js": "^1.1.1",
+    "mongodb": "^2.2.25",
+    "schemajs": "^0.1.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajendra-galgali/mongo-node-anguler.git"
+  },
+  "author": "rajendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajendra-galgali/mongo-node-anguler/issues"
+  },
+  "homepage": "https://github.com/rajendra-galgali/mongo-node-anguler#readme"
+}
