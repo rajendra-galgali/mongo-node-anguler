@@ -12,15 +12,13 @@ const appRouter = express.Router();
     module.exports = function (app) {
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.json());
-        app.use(express.static('./anguler/public'));
+        app.use(express.static('anguler'));
 
-        app.get('/',function (req,res) {
-            res.sendfile(__dirname+'/index.html')
-        });
 
         appRouter.post('/users/addUser', userDetails.addUserDetail);
-        appRouter.get('/users/getAllUsers', userDetails.getAllUsers);
+        appRouter.get('/users/getUsers', userDetails.getAllUsers);
         appRouter.delete('/users/deleteUser', userDetails.deleteUser);
+        appRouter.get('/users/loginUser', userDetails.loginUser);
         app.use('/app', appRouter);
 
 

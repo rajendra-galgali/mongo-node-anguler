@@ -11,11 +11,20 @@ exports.validateUser = function (userDetails) {
 
     return new Promise(function (resolve, reject) {
         var model = schema.create({
-            "name": {
+            "firstName": {
+                type: "string",
+                required : true
+            },
+            "lastName": {
                 type: "string"
             },
+            "userName": {
+                type: "string",
+                required: true
+            },
             "id": {
-                type: "string"
+                type: "string",
+                required : true
             },
             "age": {
                 type: "number",
@@ -23,13 +32,15 @@ exports.validateUser = function (userDetails) {
             },
             "password": {
                 type: "string",
+                required : true
             },
             "dob": {
                 type: "string",
                 filters: "trim",
             },
             "phoneNumber": {
-                type: "number"
+                type: "number",
+                filters: "trim",
             },
             "email": {
                 type: "string"
